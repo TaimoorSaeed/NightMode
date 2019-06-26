@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIk-ng-Zrb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DarkModeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-sun-40" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-rN-k2f">
+                                <rect key="frame" x="162.5" y="164" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RLa-yw-gjR"/>
+                                    <constraint firstAttribute="width" constant="50" id="yMH-84-2Go"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBx-Io-s5G">
+                                <rect key="frame" x="161" y="328" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rhA-rN-k2f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vg-Xh-5py"/>
+                            <constraint firstItem="NBx-Io-s5G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9xd-W9-Vpr"/>
+                            <constraint firstItem="rhA-rN-k2f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="MUx-F1-o7f"/>
+                            <constraint firstItem="NBx-Io-s5G" firstAttribute="top" secondItem="rhA-rN-k2f" secondAttribute="bottom" constant="114" id="kQJ-6J-hCO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jwc-bM-8oO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="MCK-LH-6NO">
+                            <connections>
+                                <action selector="refreshTheme:" destination="BYZ-38-t0r" id="HGH-im-L9z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="helloLbl" destination="NBx-Io-s5G" id="eGC-82-wpR"/>
+                        <outlet property="imgOut" destination="rhA-rN-k2f" id="IxW-kN-VGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8m5-hG-fsX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AIk-ng-Zrb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PaA-1E-jud">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yl5-oK-ucE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aL-uA-pdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-sun-40" width="30" height="30"/>
+    </resources>
+</document>
